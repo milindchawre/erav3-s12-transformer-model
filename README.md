@@ -65,9 +65,17 @@ This project implements a transformer-based language model using PyTorch. The mo
 - The training loop includes loss calculation, backpropagation, and optimizer steps.
 - The loss is monitored, and checkpoints are saved to allow for resuming training.
 - The training process is logged in `training.log`, which contains detailed statistics for each epoch, including loss values and checkpointing information.
+- The training process supports early stopping if the loss falls below a specified threshold (0.099999), which can help prevent overfitting and reduce training time.
 
 ## Actual Training
-The model was trained for a total of **78 epochs**. The final loss achieved at the end of training was approximately **0.904894**. The training log file contains detailed statistics for each epoch, including loss values and checkpointing information. You can find the log file named `training.log` in the project directory.
+The model was trained for a total of **91 epochs**. The training process involved the following steps:
+- **Data Preparation**: The model reads and encodes text data from `input.txt`, loading a total of **338,025 tokens**.
+- **Batch Processing**: Each epoch consists of **82 batches**, with each batch containing sequences of tokens for training.
+- **Loss Monitoring**: The loss is calculated at each step, and the model's performance is tracked throughout the training process.
+- **Checkpointing**: The model state and current epoch are saved in a single checkpoint file (`checkpoint.pt`) after each epoch, allowing for recovery in case of interruptions.
+- **Final Model**: After training, the model is saved with quantization and compression as `trained_model_quantized.pt`, reducing the file size for easier deployment. The final loss achieved at the end of training was approximately 0.089421.
+
+The training log file contains detailed statistics for each epoch, including loss values and checkpointing information. You can find the log file named `training.log` in the project directory.
 
 ## Checkpointing
 - The model state and current epoch are saved in a single checkpoint file (`checkpoint.pt`).
@@ -79,9 +87,9 @@ The model was trained for a total of **78 epochs**. The final loss achieved at t
 ## Working Demo
 You can try out the working demo of the model on Hugging Face Spaces:
 
-![Hugging Face Spaces Demo](./transformer-demo.png)
+![Hugging Face Spaces Demo](https://link-to-your-image.com/demo-image.png)
 
-[Play with the Demo Here](https://huggingface.co/spaces/MilindChawre/simple-transformer)
+[Play with the Demo Here](https://huggingface.co/spaces/yourusername/your-demo)
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

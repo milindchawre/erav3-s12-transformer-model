@@ -26,7 +26,7 @@ def load_latest_checkpoint(model):
 start_epoch = load_latest_checkpoint(model)
 
 # Training loop
-num_epochs = 78
+num_epochs = 91
 
 # Start time tracking
 start_time = time.time()

@@ -45,9 +45,9 @@ This project implements a transformer-based language model using PyTorch. The mo
 ## Usage
 1. Prepare your text data in a file named `input.txt`. The model will read this file to load tokens for training.
 
-2. Run the training script:
+2. To train the model, run the training script:
    ```bash
-   python transformer.py
+   python train.py
    ```
 
 3. The model will save checkpoints after each epoch in `checkpoint.pt` and the final model in `trained_model_quantized.pt`.

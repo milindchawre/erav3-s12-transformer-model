@@ -11,6 +11,7 @@ This project implements a transformer-based language model using PyTorch. The mo
 - [Actual Training](#actual-training)
 - [Checkpointing](#checkpointing)
 - [Model Compression](#model-compression)
+- [Working Demo](#working-demo)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
@@ -74,6 +75,13 @@ The model was trained for a total of **78 epochs**. The final loss achieved at t
 
 ## Model Compression
 - The final model is saved with compression to reduce file size. The model file will be saved as `trained_model_quantized.pt`.
+
+## Working Demo
+You can try out the working demo of the model on Hugging Face Spaces:
+
+![Hugging Face Spaces Demo](./transformer-demo.png)
+
+[Play with the Demo Here](https://huggingface.co/spaces/MilindChawre/simple-transformer)
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
